@@ -16,18 +16,13 @@ export default function Weather() {
         <img className="location-img" src={location} alt="" />
       </form>
       <div className="last-update">Last updated: Monday 21 June 20:13</div>
-      <ul className="currently">
-        <li>
-          <h2 className="city" id="city">
-            {" "}
-            Lisbon
+      <div className="row">
+        <div className="col-9 currently">
+          <h2 className="city">
+            San Francisco <span className="country">PT</span>
           </h2>
-        </li>
-        <li className="country" id="country">
-          PT
-        </li>
-        <li className="temp-conversion">
-          {" "}
+        </div>
+        <div className="col-3 temp-conversion">
           <a href="/" className="celsius-conv">
             °C
           </a>{" "}
@@ -35,9 +30,8 @@ export default function Weather() {
           <a href="/" className="fahrenheit-conv">
             °F
           </a>{" "}
-        </li>
-      </ul>
-
+        </div>
+      </div>
       <div className="current-weather">
         <div className="row">
           <div className="col">

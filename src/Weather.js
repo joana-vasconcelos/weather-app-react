@@ -50,9 +50,9 @@ export default function Weather() {
               <li className="current-description">Sunny</li>
               <li className="feels-like">Feels like 22°C</li>
               <li>
-                <img className="temp-img" src={maxtemp} alt="" />{" "}
+                <img className="max-temp-img" src={maxtemp} alt="" />{" "}
                 <span className="current-max-temp">26</span>°C{" "}
-                <img className="temp-img" src={mintemp} alt="" />{" "}
+                <img className="min-temp-img" src={mintemp} alt="" />{" "}
                 <span className="current-min-temp">17</span>°C
               </li>
             </ul>

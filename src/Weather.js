@@ -1,7 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import clearday from "./clear-day.svg";
-import location from "./media/location.png"
+import location from "./media/location.png";
 
 export default function Weather() {
   return (
@@ -15,24 +15,29 @@ export default function Weather() {
         <input className="form-submit" type="submit" value="Search" />
         <img className="location-img" src={location} alt="" />
       </form>
-
-      <div className="row">
-        <div className="col city">
+      <div className="last-update">Last updated: Monday 21 June 20:13</div>
+      <ul className="currently">
+        <li>
+          <h2 className="city" id="city">
+            {" "}
+            Lisbon
+          </h2>
+        </li>
+        <li className="country" id="country">
+          PT
+        </li>
+        <li className="temp-conversion">
           {" "}
-          <h2>Lisbon </h2>{" "}
-        </div>
-        <div className="col country">PT</div>
-        <div className="col temp-conversion">
           <a href="/" className="celsius-conv">
             °C
           </a>{" "}
           |{" "}
           <a href="/" className="fahrenheit-conv">
             °F
-          </a>
-        </div>
-      </div>
-      <div className="last-update">Last updated: Monday 21 June 20:13</div>
+          </a>{" "}
+        </li>
+      </ul>
+
       <div className="current-weather">
         <div className="row">
           <div className="col">
@@ -45,7 +50,7 @@ export default function Weather() {
                 <h1>24°C</h1>
               </li>
               <li className="current-description">Sunny</li>
-              <li className="feels-like">Feels like: 22°C</li>
+              <li className="feels-like">Feels like 22°C</li>
               <li>
                 {" "}
                 img <span className="current-max-temp">26</span>°C img{" "}

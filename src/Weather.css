@@ -1,11 +1,37 @@
 .frame {
   border: 1px solid black;
-  width: 400px;
+  width: 450px;
   margin: 50px auto 0;
 }
 
 .form {
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.form-search {
+    margin-right:8px;
+    border-radius:4px;
+    border: 1px solid black;
+    width: 250px;
+}
+
+.form-submit {
+    border-radius: 4px;
+    padding: 3px 15px;
+    border: none;
+    color: #e7ece8;
+    background-color:#557571;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.location-img {
+    width: 25px;
+    color:#557571;
+    margin-left:15px;
 }
 
 .col {

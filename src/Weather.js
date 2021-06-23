@@ -1,5 +1,7 @@
 import React from "react";
 import "./Weather.css";
+import clearday from "./clear-day.svg";
+import location from "./media/location.png"
 
 export default function Weather() {
   return (
@@ -11,7 +13,9 @@ export default function Weather() {
           placeholder="Enter a city"
         />
         <input className="form-submit" type="submit" value="Search" />
+        <img className="location-img" src={location} alt="" />
       </form>
+
       <div className="row">
         <div className="col city">
           {" "}
@@ -31,7 +35,9 @@ export default function Weather() {
       <div className="last-update">Last updated: Monday 21 June 20:13</div>
       <div className="current-weather">
         <div className="row">
-          <div className="col">image</div>
+          <div className="col">
+            <img src={clearday} alt="" />
+          </div>
           <div className="col">
             <ul>
               <li className="current-temp">

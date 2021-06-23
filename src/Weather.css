@@ -39,7 +39,7 @@
 }
 
 .city {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   margin-left: 20px;
   text-transform: capitalize;
@@ -59,7 +59,7 @@
   color: #4c6865;
   position: relative;
   top: 7px;
-  right: 30px;
+  right: 20px;
 }
 
 .celsius-conv {
@@ -78,4 +78,53 @@
   color: rgba(0, 0, 0, 0.63);
   font-size: 13px;
   margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.conditions li {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.conditions ul {
+  text-align: center;
+}
+
+.wind-img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.humidity-img {
+  width: 15px;
+  margin-left: 30px;
+  margin-right: 8px;
+}
+
+.temp-img {
+  width: 20px;
+}
+
+.current-temp {
+  color: #ec6e4c;
+  margin-top: 25px;
+}
+
+.temperature {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.unit {
+  position: relative;
+  bottom: 15px;
+  margin-left: 5px;
+}
+
+.current-weather li {
+  line-height: 32px;
 }

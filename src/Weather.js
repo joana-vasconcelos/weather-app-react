@@ -2,6 +2,10 @@ import React from "react";
 import "./Weather.css";
 import clearday from "./clear-day.svg";
 import location from "./media/location.png";
+import wind from "./media/wind.svg";
+import humidity from "./media/humidity.svg";
+import maxtemp from "./media/max-temp.png";
+import mintemp from "./media/min-temp.png";
 
 export default function Weather() {
   return (
@@ -40,22 +44,31 @@ export default function Weather() {
           <div className="col">
             <ul>
               <li className="current-temp">
-                {" "}
-                <h1>24°C</h1>
+                <span className="temperature">24</span>
+                <span className="unit">°C</span>
               </li>
               <li className="current-description">Sunny</li>
               <li className="feels-like">Feels like 22°C</li>
               <li>
-                {" "}
-                img <span className="current-max-temp">26</span>°C img{" "}
+                <img className="temp-img" src={maxtemp} alt="" />{" "}
+                <span className="current-max-temp">26</span>°C{" "}
+                <img className="temp-img" src={mintemp} alt="" />{" "}
                 <span className="current-min-temp">17</span>°C
               </li>
             </ul>
           </div>
         </div>
-        <div className="row">
-          <div className="col">img Wind: 20 km/h</div>
-          <div className="col">img Humidity: 55%</div>
+        <div className="conditions">
+          <ul>
+            <li className="wind">
+              <img className="wind-img" src={wind} alt="" /> Wind: 20 km/h
+            </li>
+            <li className="humidity">
+              {" "}
+              <img className="humidity-img" src={humidity} alt="" />
+              Humidity: 55%
+            </li>
+          </ul>
         </div>
       </div>
     </div>

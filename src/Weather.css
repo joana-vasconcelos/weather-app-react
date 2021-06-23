@@ -59,7 +59,7 @@
   padding: 3px 6px;
   color: #4c6865;
   position: relative;
-  top: 7px;
+  top: 5px;
   right: 20px;
 }
 
@@ -111,12 +111,12 @@ ul {
 }
 
 .min-temp-img {
-    width:20px;
-    margin-left: 8px;
+  width: 20px;
+  margin-left: 8px;
 }
 
 .current-temp {
-  color: #ec6e4c;
+  color: #4c6865;
   margin-top: 25px;
 }
 
@@ -133,4 +133,8 @@ ul {
 
 .current-weather li {
   line-height: 32px;
+}
+
+.current-description {
+    text-transform: capitalize;
 }

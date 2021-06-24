@@ -1,9 +1,9 @@
 .frame {
-  border: 1px solid black;
+  border: 1px solid #e3e9e7;
   max-width: 400px;
   margin: 50px auto 0;
   border-radius: 6px;
-  background-color: #6e8a8331;
+  background-color: #e3e9e7;
 }
 
 .form {
@@ -21,12 +21,17 @@
 
 .form-submit {
   border-radius: 4px;
-  padding: 3px 15px;
-  border: none;
-  color: #e7ece8;
+  padding: 2px 13px;
+  border: 2px solid #4c6865;
+  color: #e3e9e7;
   background-color: #4c6865;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
+}
+
+.form-submit:hover {
+  color: #4c6865;
+  background-color: #e3e9e7;
 }
 
 .location-img {
@@ -93,7 +98,6 @@ ul {
 
 .conditions ul {
   text-align: center;
-
 }
 
 .wind-img {
@@ -126,7 +130,7 @@ ul {
   font-weight: bold;
 }
 
-.unit {
+.current-temp .unit {
   position: relative;
   bottom: 15px;
   margin-left: 5px;
@@ -145,7 +149,8 @@ ul {
 .current-description,
 .feels-like,
 .current-max-temp,
-.current-min-temp {
+.current-min-temp,
+.max-min-temp .unit {
   font-size: 14px;
   line-height: 25px;
 }

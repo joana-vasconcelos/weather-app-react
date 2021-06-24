@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 import location from "./media/location.png";
 import wind from "./media/wind.svg";
 import humidity from "./media/humidity.svg";
@@ -15,6 +16,7 @@ export default function Weather(props) {
       console.log(response.data);
     setWeather({
         ready: true,
+        date: new Date(response.data.dt *1000),
       temperature: response.data.main.temp,
       feelsLike: response.data.main.feels_like,
       maxTemp: response.data.main.temp_max,
@@ -39,7 +41,7 @@ export default function Weather(props) {
           <input className="form-submit" type="submit" value="Search" />
           <img className="location-img" src={location} alt="" />
         </form>
-        <div className="last-update">Last updated: Monday 21 June 20:13</div>
+        <div className="last-update">Last updated: <FormattedDate date={weather.date} /> </div>
         <div className="row">
           <div className="col-9 currently">
             <h2 className="city">
@@ -73,16 +75,17 @@ export default function Weather(props) {
                 <li className="feels-like">
                   Feels like {Math.round(weather.feelsLike)}°C
                 </li>
-                <li>
+                <li className="max-min-temp">
                   <img className="max-temp-img" src={maxtemp} alt="" />{" "}
                   <span className="current-max-temp">
                     {Math.round(weather.maxTemp)}
                   </span>
-                  °C <img className="min-temp-img" src={mintemp} alt="" />{" "}
+                  <span className="unit">°C</span>{" "}
+                  <img className="min-temp-img" src={mintemp} alt="" />{" "}
                   <span className="current-min-temp">
                     {Math.round(weather.minTemp)}
                   </span>
-                  °C
+                  <span className="unit">°C</span>
                 </li>
               </ul>
             </div>
@@ -90,7 +93,8 @@ export default function Weather(props) {
           <div className="conditions">
             <ul>
               <li className="wind">
-                <img className="wind-img" src={wind} alt="" /> Wind: {Math.round(weather.wind)} km/h
+                <img className="wind-img" src={wind} alt="" /> Wind:{" "}
+                {Math.round(weather.wind)} km/h
               </li>
               <li className="humidity">
                 {" "}

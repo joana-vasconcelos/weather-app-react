@@ -93,6 +93,7 @@ ul {
 
 .conditions ul {
   text-align: center;
+
 }
 
 .wind-img {
@@ -117,11 +118,11 @@ ul {
 
 .current-temp {
   color: #4c6865;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -131,10 +132,20 @@ ul {
   margin-left: 5px;
 }
 
-.current-weather li {
-  line-height: 32px;
+.current-description {
+  text-transform: capitalize;
 }
 
-.current-description {
-    text-transform: capitalize;
+.weather-icon {
+  width: 175px;
+  display: block;
+  margin: -10px auto;
+}
+
+.current-description,
+.feels-like,
+.current-max-temp,
+.current-min-temp {
+  font-size: 14px;
+  line-height: 25px;
 }

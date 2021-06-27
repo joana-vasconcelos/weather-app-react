@@ -68,15 +68,10 @@
   right: 20px;
 }
 
-.celsius-conv {
-  text-decoration: none;
-  font-weight: 700;
-  color: #4c6865;
-}
-
+.celsius-conv,
 .fahrenheit-conv {
   text-decoration: none;
-  color: #4c68659d;
+  color: #4c6865;
 }
 
 .last-update {

@@ -1,6 +1,7 @@
 .WeatherForecast {
   text-align: center;
   margin-bottom: 10px;
+  margin-top:25px;
 }
 
 .forecast-week-day {
@@ -15,9 +16,10 @@
 
 .forecast-icon {
   width: 50px;
+  margin-bottom: -5px;
 }
 
 .forecast-temperatures {
   font-size: 11px;
-  opacity: 0.9;
+  opacity: 0.8;
 }

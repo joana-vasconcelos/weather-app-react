@@ -57,7 +57,7 @@ export default function Weather(props) {
           <img className="location-img" src={location} alt="" />
         </form>
         <WeatherInfo data={weather} />
-        <WeatherForecast icon = {weather.icon} coords={weather.coords}/>
+        <WeatherForecast coords={weather.coords}/>
       </div>
     );
   } else {

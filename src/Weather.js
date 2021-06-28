@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import WeatherForecast from "./WeatherForecast";
 
 import WeatherInfo from "./WeatherInfo";
 import location from "./media/location.png";
@@ -23,6 +24,7 @@ export default function Weather(props) {
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       city: response.data.name,
       country: response.data.sys.country,
+      coords: response.data.coord,
     });
   }
 
@@ -55,6 +57,7 @@ export default function Weather(props) {
           <img className="location-img" src={location} alt="" />
         </form>
         <WeatherInfo data={weather} />
+        <WeatherForecast icon = {weather.icon} coords={weather.coords}/>
       </div>
     );
   } else {

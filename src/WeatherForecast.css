@@ -1,0 +1,23 @@
+.WeatherForecast {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.forecast-week-day {
+  font-weight: bold;
+  color: #4c6865;
+  font-size: 13px;
+  margin-bottom: -5px;
+}
+.forecast-max-temp {
+  font-weight: bold;
+}
+
+.forecast-icon {
+  width: 50px;
+}
+
+.forecast-temperatures {
+  font-size: 11px;
+  opacity: 0.9;
+}

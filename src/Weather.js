@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import WeatherForecast from "./WeatherForecast";
+
 
 import WeatherInfo from "./WeatherInfo";
 import location from "./media/location.png";
@@ -59,7 +59,7 @@ export default function Weather(props) {
           <img className="location-img" src={location} alt="" />
         </form>
         <WeatherInfo data={weather} />
-        <WeatherForecast coords={weather.coords}/>
+        
       </div>
     );
   } else {

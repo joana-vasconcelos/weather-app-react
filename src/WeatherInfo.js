@@ -4,6 +4,8 @@ import wind from "./media/wind.svg";
 import humidity from "./media/humidity.svg";
 import maxtemp from "./media/max-temp.png";
 import mintemp from "./media/min-temp.png";
+import WeatherForecastFahrenheit from "./WeatherForecastFahrenheit";
+import WeatherForecastCelsius from "./WeatherForecastCelsius";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("celsius");
@@ -90,6 +92,7 @@ export default function WeatherInfo(props) {
             </ul>
           </div>
         </div>
+        <WeatherForecastCelsius coords={props.data.coords} />
       </div>
     );
   } else {
@@ -160,6 +163,7 @@ export default function WeatherInfo(props) {
             </ul>
           </div>
         </div>
+        <WeatherForecastFahrenheit coords={props.data.coords} />
       </div>
     );
   }

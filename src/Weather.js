@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-
-
 import WeatherInfo from "./WeatherInfo";
 import location from "./media/location.png";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-
-
 
   function handleResponse(response) {
     setWeather({
@@ -45,6 +41,17 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function CurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(function (position) {
+      const apiKey = "92144e2b99c1b69c6667a76ec620ea0d";
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(handleResponse);
+    });
+  }
+
   if (weather.ready) {
     return (
       <div className="frame">
@@ -56,10 +63,14 @@ export default function Weather(props) {
             onChange={handleCityChange}
           />
           <input className="form-submit" type="submit" value="Search" />
-          <img className="location-img" src={location} alt="" />
+          <img
+            className="location-img"
+            src={location}
+            alt=""
+            onClick={CurrentLocation}
+          />
         </form>
         <WeatherInfo data={weather} />
-        
       </div>
     );
   } else {
